@@ -12,7 +12,7 @@ class AnimalsController extends Controller
     public function index()
     {
         //query search all, linking with owners and images
-        
+        $animal = Animals::select('SELECT * FROM animals LEFT JOIN owners ON owner.id = owners.id LEFT JOIN images ON images.id = images.id');
 
         return view('index', compact('list')); 
     }
@@ -29,16 +29,13 @@ class AnimalsController extends Controller
         if ($id)
         {
             //query data
-            // $list = DB::select('SELECT * FROM animals ORDER BY id LIMIT 100')
-            //         ->join('owners', 'owner.id', '=', 'id')
-            //         ->join('images', 'image.id', '=', 'id');
 
             //if readonly pass also a 'readonly'
 
             //return view with data (and with string)
             return view('update', compact('animal data'));
         } else {
-//return view as data was empty object based on animal model
+            //return view as data was empty object based on animal model
         }
     }
 
