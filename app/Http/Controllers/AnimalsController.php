@@ -28,7 +28,8 @@ class AnimalsController extends Controller
 
     public function update(Request $request, $id, $readonly = false)
     {
-        return view('update', compact('animal data'));
+
+        return view('update', compact('animal', 'readonly'));
 
         if ($id)
         {
