@@ -3,12 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Owner;
+use App\Models\Animals;
+use App\Models\Images;
 
 class AnimalsController extends Controller
 {
     public function index()
     {
-        // query everything
+        //query search all, linking with owners and images
+        
+
         return view('index', compact('list')); 
     }
 
@@ -24,10 +29,14 @@ class AnimalsController extends Controller
         if ($id)
         {
             //query data
+            // $list = DB::select('SELECT * FROM animals ORDER BY id LIMIT 100')
+            //         ->join('owners', 'owner.id', '=', 'id')
+            //         ->join('images', 'image.id', '=', 'id');
 
             //if readonly pass also a 'readonly'
 
-            //return vie with data (and with string)
+            //return view with data (and with string)
+            return view('update', compact('animal data'));
         } else {
 //return view as data was empty object based on animal model
         }
