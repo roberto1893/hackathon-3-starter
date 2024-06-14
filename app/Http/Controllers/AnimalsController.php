@@ -21,11 +21,23 @@ class AnimalsController extends Controller
     {
         return view('update', compact('animal data'));
 
-        if ($readonly == true)
+        if ($id)
         {
-            
-        } else {
+            //query data
 
+            //if readonly pass also a 'readonly'
+
+            //return vie with data (and with string)
+        } else {
+//return view as data was empty object based on animal model
         }
+    }
+
+    public function savingData(Request $request, $id = null)
+    {
+        //either get from database or create empty then change parameters according to request
+        //then save then redirect to detail
+        //flash when submitted
+        
     }
 }
