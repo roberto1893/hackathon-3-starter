@@ -33,7 +33,8 @@ class AnimalsController extends Controller
         if ($id)
         {
             //query data
-            $animal = Animal::select('SELECT * FROM animals WHERE');
+            $animal = Animal::select('SELECT * FROM animals');
+            
             
             //if readonly pass also a 'readonly'
 
