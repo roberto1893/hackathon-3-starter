@@ -17,6 +17,6 @@ Route::get('/', [App\Http\Controllers\AnimalsController::class, 'index']);
 
 Route::get('/search', [App\Http\Controllers\AnimalsController::class, 'search'])->name('animal.search');
 
-Route::get('/update{id?}', [App\Http\Controllers\AnimalsController::class, 'update'])->name('animal.update');
+Route::get('/update/{id?}', [App\Http\Controllers\AnimalsController::class, 'update'])->name('animal.update');
 
-Route::post('/update{id?}', [App\Http\Controllers\AnimalsController::class, 'savingData'])->name('animal.save');
+Route::post('/update/{id?}', [App\Http\Controllers\AnimalsController::class, 'savingData'])->name('animal.save');

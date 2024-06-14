@@ -36,12 +36,12 @@
             <td>{{$animal->id}}</td>
             <td><img src="/images/pets/{{ $animal->image->path }}" alt="animal-picture" style="height: 50px"></td>
             <td>{{$animal->owner->first_name}} {{$animal->owner->surname}}</td>
-            <td><a href="{{route('animal.update', $animal->id)}}">{{$animal->name}}</a></td>
+            <td><a href="{{route('animal.update', $animal->id, true)}}">{{$animal->name}}</a></td>
             <td>{{$animal->species}}</td>
             <td>{{$animal->breed}}</td>
             <td>{{$animal->age}}</td>
             <td>{{$animal->weight}}</td>
-            <td><a href="{{route('animal.update', $animal->id, true)}}">Edit data</a></td>
+            <td><a href="{{route('animal.update', $animal->id)}}">Edit data</a></td>
             <td><a href="#">Visit</a></td>
         </tr>
     @endforeach
